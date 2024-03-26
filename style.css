@@ -1,21 +1,31 @@
 *{
     box-sizing: border-box;
 }
-.form{
+.form,
+.form fieldset{
     display: flex;
     flex-direction: column;
-
+}
+.form{
     max-width: 350px;
     margin: 10px auto;
 
-    gap: 10px;
 }
-.form>label{
+.form label{
     display: flex;
     justify-content: space-between;
 }
-.form>label>input{
+.form label:has(in:required)>span:after{
+    content: '*';
+    color: pink
+}
+.form label>input{
     width: 70%;
+    border: 2px solid #ddd;
+}
+.form> abel>input:focus{
+    outline: 3px dotted pink;
+    border: 2px solid transparent;
 }
 .form [type="submit"]{
     width: 70%;

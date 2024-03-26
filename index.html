@@ -1,27 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML</title>
     <link rel="stylesheet" href="/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- <form class="form">
         <input type="text" name="fname" placeholder="login">
         <input type="password" name="password" placeholder="password">
         <input type="submit" value="send">
     </form> -->
-    <form class="form">
+    <form class="form" action="" method="post" enctype="multipart/form-data">
+      <label for="form" action=""></label>
+      <input type="file" name="file" id="file">
+      <fieldset>
+        <legend>information</legend>
         <label>
-            <span>login</span>
-            <input type="text" name="login" placeholder="@gmail.com">
-        </label>    
-        <label>
-            <span>password</span>
-            <input type="password" name="password" placeholder="min. 6 letters">
+          <span>login</span>
+          <input type="text" name="login" placeholder="@gmail.com"  />
         </label>
-        <input type="submit" value="send">
+        <label>
+          <span>password</span>
+          <input
+            type="password"
+            name="password"
+            placeholder="min. 6 letters"
+            autofocus
+            required
+             
+          />
+        </label>
+        <label>
+          <span>email</span>
+          <input type="email" name="email" required  />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>choose sex</legend>
+        <!-- label*2>span+input[type="radio"] -->
+        <label> 
+            <span>male</span>
+            <input type="radio" name="sex" value="male" checked/>
+        </label>
+        <label>
+            <span>female</span>
+            <input type="radio" name="sex" value="female" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>choose language</legend>
+        <label> 
+            <span>ua</span>
+            <input type="checkbox" name="language" value="ua"/>
+        </label>
+        <label>
+            <span>au</span>
+            <input type="checkbox" name="language" value="au" checked/>
+        </label>
+        <label>
+            <span>en</span>
+            <input type="checkbox" name="language" value="en" checked/>
+        </label>
+        <label>
+            <span>ger</span>
+            <input type="checkbox" name="language" value="ger"/>
+        </label>
+      </fieldset>
+      <p>* - required field</p>
+      <!-- <input type="reset" value="reset"> -->
+      <input type="submit" value="send" />
     </form>
-</body>
+  </body>
 </html>
+
+(element form data = bd$)*4
