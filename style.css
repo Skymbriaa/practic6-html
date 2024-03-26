@@ -1,6 +1,18 @@
 *{
     box-sizing: border-box;
 }
+textarea::-moz-placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+}
+textarea::placeholder{
+    font-family: Arial, sans-serif;
+}
+textarea::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* input::after{
+    content: '!'
+} */
 .form,
 .form fieldset{
     display: flex;
@@ -30,4 +42,13 @@
 .form [type="submit"]{
     width: 70%;
     align-self: flex-end;
+}
+[type='radio']{
+    display: none;
+}
+label:has([type='radio'])::after{
+    content: '0'
+}
+label:has([type='radio']:checked)::after{
+    content: '1';
 }
